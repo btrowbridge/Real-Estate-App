@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f99c38"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Main Menu"
+        android:id="@+id/MenuTxt"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.06"
+        android:textAlignment="center"
+        android:singleLine="false"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:id="@+id/ContactsButton"
+        android:layout_weight="0.09"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:background="#0096fb"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:textSize="28dp"
+        android:onClick="MainActivity.toContacts()" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Properties"
+        android:id="@+id/PropertiesButton"
+        android:layout_weight="0.09"
+        android:singleLine="false"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:layout_gravity="center"
+        android:background="#0096fb"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:textSize="28dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Contracts"
+        android:id="@+id/ContractsButton"
+        android:layout_weight="0.09"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:layout_gravity="center"
+        android:background="#0096fb"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:textSize="28dp" />
+</LinearLayout>

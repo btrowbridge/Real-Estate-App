@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".ContactsActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/back"
+            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:layout_weight="3"
+            android:background="#f9a242" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contacts"
+            android:id="@+id/ContactHead"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="#f99c38"
+            android:autoText="false"
+            android:textSize="30dp"
+            android:layout_weight="2" />
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/toAddContact"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:background="#f9a242"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#4052b5">
+
+        <EditText
+            android:layout_width="324dp"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:background="#ffffff"
+            android:layout_margin="5dp"
+            android:hint="Search" />
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#f9a243"
+        android:id="@+id/List"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:weightSum="1">
+
+
+    </LinearLayout>
+
+</LinearLayout>
