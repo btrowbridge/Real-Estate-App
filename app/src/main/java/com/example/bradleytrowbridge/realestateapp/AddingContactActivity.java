@@ -16,11 +16,14 @@ import android.widget.TextView;
  */
 public class AddingContactActivity extends AppCompatActivity {
 
+    ContactListAdapter myContacts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_new_contact);
 
+        Bundle bundle = getIntent().getExtras();
+        myContacts = (ContactListAdapter) bundle.get("Contacts");
         AddButtonListeners();
     }
     public void AddButtonListeners(){
@@ -41,13 +44,16 @@ public class AddingContactActivity extends AppCompatActivity {
         String LName = textbox2.getText().toString();
         newContact.setFname(FName);
         newContact.setLname(LName);
-        newContact.writeToFile();
+
+        myContacts.ContactList.add(newContact);
 
 
 
 
         //change activities
+        //add Contacts to intent
         Intent intent = new Intent(this, ContactsActivity.class);
+        intent.putExtra("Contacts",myContacts);
         startActivity(intent);
 
     }
